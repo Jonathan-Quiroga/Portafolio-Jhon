@@ -19,6 +19,7 @@ header{
     height:10vh;
     background-color: $dark;
     position: fixed;
+    z-index: 2;
     top: 0 ;
     display: flex;
     align-items: center;
@@ -26,9 +27,6 @@ header{
     color: whitesmoke;
     padding: 5%;
     font-size: 20px;
-
-    
-    
 
     .perfil{
         .logo{
@@ -44,8 +42,6 @@ header{
         font-size: 1.25rem;
         background-color: transparent;
         color: whitesmoke;
-
-    
     }
     .nav{
         display: none;     
@@ -92,18 +88,99 @@ header{
     width: 100vw;
     height:90vh;
     margin-top: 10vh;
+
     #inicio{
-        background-color: $medio;
         width: 100%;
         height: 100%;
+        color: whitesmoke;
+        background: url("https://execute.grupometis.org/wp-content/uploads/2020/06/java.jpg");        
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        div{
+            background-color: rgb(52, 58, 64,.7);
+            width: 100%;
+            height: 100%;     
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-top: 25vh;
+            p{
+                font-size: 30px;   
+                margin: 15px 0;
+            }
+            .letras{
+                text-shadow: 5px 5px 5px $red;
+                font-size: 40px;
+            }
+        }
     }
+        
+
     #sobreMi{
-        background-color: $claro;
         width: 100%;
         height: 100%;
+        background-color: $medio;
+        color: whitesmoke;
+        font-size: 12px;
+        padding:0 10%;
+        display: flex;
+        flex-direction: column;
+        .titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .tit_uno{
+                position: absolute;
+                color:$titulo1;
+                letter-spacing: 5px;
+                font-size: 30px;
+
+            }
+            .tit_dos{
+                z-index: 1;
+                position: absolute;
+                letter-spacing: 11px;
+                font-size: 10px;
+                margin-top:2.5vh;
+                h2{
+                    text-decoration: underline $red ;
+                }
+            }
+        }
+        .sobreMi_texto{
+            color: #abb0b4;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 10vh;
+            h2{
+                font-size: 12px;
+                color: whitesmoke;
+                span{
+                    color: $red;
+                }
+            }
+            p{
+                margin: 2vh 0;
+                line-height: 1.5;
+
+                @media (max-width:415px){
+                    .borrar-texto{
+                        display: none;
+                    }
+                }
+            }
+            .sobreMi_texto_img{
+                width: 30vw;
+                margin: auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
     }
     #tecnologias{
-        background-color: $medio;
+        background-color: $claro;
         width: 100%;
         height: 100%;
     }

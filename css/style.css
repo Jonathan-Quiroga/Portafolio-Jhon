@@ -9,6 +9,7 @@ header {
   height: 10vh;
   background-color: #082032;
   position: fixed;
+  z-index: 2;
   top: 0;
   display: flex;
   align-items: center;
@@ -71,17 +72,94 @@ header .visible .nav-list li {
   margin-top: 10vh;
 }
 .contenido #inicio {
-  background-color: #2C394B;
   width: 100%;
   height: 100%;
+  color: whitesmoke;
+  background: url("https://execute.grupometis.org/wp-content/uploads/2020/06/java.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+.contenido #inicio div {
+  background-color: rgba(52, 58, 64, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 25vh;
+}
+.contenido #inicio div p {
+  font-size: 30px;
+  margin: 15px 0;
+}
+.contenido #inicio div .letras {
+  text-shadow: 5px 5px 5px #FF4C29;
+  font-size: 40px;
 }
 .contenido #sobreMi {
-  background-color: #334756;
   width: 100%;
   height: 100%;
+  background-color: #2C394B;
+  color: whitesmoke;
+  font-size: 12px;
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+.contenido #sobreMi .titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contenido #sobreMi .titulo .tit_uno {
+  position: absolute;
+  color: #26475e;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+.contenido #sobreMi .titulo .tit_dos {
+  z-index: 1;
+  position: absolute;
+  letter-spacing: 11px;
+  font-size: 10px;
+  margin-top: 2.5vh;
+}
+.contenido #sobreMi .titulo .tit_dos h2 {
+  -webkit-text-decoration: underline #FF4C29;
+          text-decoration: underline #FF4C29;
+}
+.contenido #sobreMi .sobreMi_texto {
+  color: #abb0b4;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+.contenido #sobreMi .sobreMi_texto h2 {
+  font-size: 12px;
+  color: whitesmoke;
+}
+.contenido #sobreMi .sobreMi_texto h2 span {
+  color: #FF4C29;
+}
+.contenido #sobreMi .sobreMi_texto p {
+  margin: 2vh 0;
+  line-height: 1.5;
+}
+@media (max-width: 415px) {
+  .contenido #sobreMi .sobreMi_texto p .borrar-texto {
+    display: none;
+  }
+}
+.contenido #sobreMi .sobreMi_texto .sobreMi_texto_img {
+  width: 30vw;
+  margin: auto;
+}
+.contenido #sobreMi .sobreMi_texto .sobreMi_texto_img img {
+  width: 100%;
 }
 .contenido #tecnologias {
-  background-color: #2C394B;
+  background-color: #334756;
   width: 100%;
   height: 100%;
 }
@@ -97,7 +175,7 @@ footer {
   height: 10%;
 }
 
-@media (min-width: 501px) and (max-width: 900px) {
+@media (min-width: 501px) and (max-width: 1100px) {
   /* menu */
   * {
     margin: 0;
@@ -118,32 +196,123 @@ footer {
     margin-top: 10vh;
   }
   .contenido #inicio {
-    background-color: #2C394B;
     width: 100%;
     height: 100%;
+    color: whitesmoke;
+    background: url("https://execute.grupometis.org/wp-content/uploads/2020/06/java.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  .contenido #inicio div {
+    background-color: rgba(52, 58, 64, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25vh;
+  }
+  .contenido #inicio div p {
+    font-size: 40px;
+    margin: 15px 0;
+  }
+  .contenido #inicio div .letras {
+    text-shadow: 5px 5px 5px #FF4C29;
+    font-size: 60px;
   }
   .contenido #sobreMi {
+    width: 100%;
+    height: 100%;
+    background-color: #2C394B;
+    color: whitesmoke;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenido #sobreMi .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+  }
+  .contenido #sobreMi .titulo .tit_uno {
+    position: absolute;
+    color: #26475e;
+    letter-spacing: 5px;
+    font-size: 45px;
+  }
+  .contenido #sobreMi .titulo .tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 15px;
+    margin-top: 3.5vh;
+  }
+  .contenido #sobreMi .titulo .tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #sobreMi .sobreMi_texto {
+    color: #abb0b4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15vh;
+    font-size: 15px;
+  }
+  .contenido #sobreMi .sobreMi_texto h2 {
+    font-size: 17px;
+    color: whitesmoke;
+  }
+  .contenido #sobreMi .sobreMi_texto h2 span {
+    color: #FF4C29;
+  }
+  .contenido #sobreMi .sobreMi_texto p {
+    margin: 2vh 0;
+    line-height: 1.3;
+  }
+  .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img {
+    display: none;
+  }
+}
+@media (min-width: 501px) and (max-width: 1100px) and (min-width: 800px) {
+  .contenido #sobreMi .sobreMi_texto {
+    flex-direction: row;
+  }
+  .contenido #sobreMi .sobreMi_texto h2 {
+    margin-top: 5vh;
+  }
+  .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img {
+    width: 600px;
+    margin-left: 5vw;
+    display: block;
+  }
+  .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img img {
+    width: 100%;
+  }
+}
+@media (min-width: 501px) and (max-width: 1100px) {
+  .contenido #tecnologias {
     background-color: #334756;
     width: 100%;
     height: 100%;
   }
-  .contenido #tecnologias {
-    background-color: #2C394B;
-    width: 100%;
-    height: 100%;
-  }
+}
+@media (min-width: 501px) and (max-width: 1100px) {
   .contenido #portafolio {
     background-color: #334756;
     width: 100%;
     height: 90%;
   }
+}
+@media (min-width: 501px) and (max-width: 1100px) {
   .footer {
     background-color: red;
     width: 100%;
     height: 10%;
   }
 }
-@media (min-width: 901px) {
+@media (min-width: 1101px) {
   * {
     margin: 0;
     padding: 0;
@@ -179,9 +348,9 @@ footer {
     align-items: center;
   }
   header .perfil .logo {
-    width: 70%;
-    height: 90%;
-    border-radius: 10%;
+    width: 150px;
+    height: 130px;
+    border-radius: 20%;
   }
   header .abrir-menu,
   header .cerrar-menu {
@@ -222,14 +391,93 @@ footer {
     background-color: #2C394B;
     width: 100%;
     height: 100%;
+    color: whitesmoke;
+    background: url("https://execute.grupometis.org/wp-content/uploads/2020/06/java.jpg");
+    background-size: 100% 100%;
+    background-attachment: fixed;
+  }
+  .contenido #inicio div {
+    background-color: rgba(52, 58, 64, 0.7);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 25vh;
+  }
+  .contenido #inicio div p {
+    font-size: 50px;
+    margin: 25px 0;
+  }
+  .contenido #inicio div .letras {
+    text-shadow: 5px 5px 5px #FF4C29;
+    font-size: 70px;
   }
   .contenido #sobreMi {
-    background-color: #334756;
+    width: 100%;
+    height: 100%;
+    background-color: #2C394B;
+    color: whitesmoke;
+    font-size: 12px;
+    padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contenido #sobreMi .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+  }
+  .contenido #sobreMi .titulo .tit_uno {
+    position: absolute;
+    color: #26475e;
+    letter-spacing: 5px;
+    font-size: 65px;
+  }
+  .contenido #sobreMi .titulo .tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 22px;
+    margin-top: 4.5vh;
+  }
+  .contenido #sobreMi .titulo .tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #sobreMi .sobreMi_texto {
+    color: #abb0b4;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 17vh;
+    font-size: 20px;
+  }
+  .contenido #sobreMi .sobreMi_texto .texto_text {
+    width: 90%;
+  }
+  .contenido #sobreMi .sobreMi_texto h2 {
+    font-size: 25px;
+    color: whitesmoke;
+  }
+  .contenido #sobreMi .sobreMi_texto h2 span {
+    color: #FF4C29;
+  }
+  .contenido #sobreMi .sobreMi_texto p {
+    margin: 2vh 0;
+    line-height: 1.2;
+  }
+  .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img {
+    height: 30vh;
+    margin: auto;
+  }
+  .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img img {
     width: 100%;
     height: 100%;
   }
   .contenido #tecnologias {
-    background-color: #2C394B;
+    background-color: #334756;
     width: 100%;
     height: 100%;
   }
