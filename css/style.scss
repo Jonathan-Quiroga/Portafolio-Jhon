@@ -1,0 +1,129 @@
+$dark:#082032;
+$medio:#2C394B;
+$claro:#334756;
+$red:#FF4C29;
+$titulo1:#26475e;
+$titulo2:#11466c;
+
+// telefono 500px
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+header{
+    width: 100vw;
+    height:10vh;
+    background-color: $dark;
+    position: fixed;
+    top: 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: whitesmoke;
+    padding: 5%;
+    font-size: 20px;
+
+    
+    
+
+    .perfil{
+        .logo{
+            width: 50px;
+            border-radius: 10%;
+        }
+    }
+    .abrir-menu,
+    .cerrar-menu{
+        cursor: pointer;
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        color: whitesmoke;
+
+    
+    }
+    .nav{
+        display: none;     
+        
+        .redes{
+            display: none;
+        }
+
+        .nav-list{
+
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            align-items: end;
+            a{
+                text-decoration: none;
+                color:whitesmoke;
+            }
+        }
+    }
+
+    .visible{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1rem;
+        position:absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(249, 127, 102);
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(255, 255, 255,.3);
+        height: 100vh;
+        
+        .nav-list li{
+            margin: 2rem 0 ;
+        }
+    }
+}
+
+.contenido{
+    width: 100vw;
+    height:90vh;
+    margin-top: 10vh;
+    #inicio{
+        background-color: $medio;
+        width: 100%;
+        height: 100%;
+    }
+    #sobreMi{
+        background-color: $claro;
+        width: 100%;
+        height: 100%;
+    }
+    #tecnologias{
+        background-color: $medio;
+        width: 100%;
+        height: 100%;
+    }
+    #portafolio{
+        background-color: $claro;
+        width: 100%;
+        height: 90%;
+
+    }
+}
+
+footer{
+    background-color: red;
+    width: 100%;
+    height: 10%;
+
+}
+
+@import "tablet";
+@import "lap";
+
+
+
