@@ -146,11 +146,6 @@ header .visible .nav-list li {
   margin: 2vh 0;
   line-height: 1.5;
 }
-@media (max-width: 415px) {
-  .contenido #sobreMi .sobreMi_texto p .borrar-texto {
-    display: none;
-  }
-}
 .contenido #sobreMi .sobreMi_texto .sobreMi_texto_img {
   width: 30vw;
   margin: auto;
@@ -159,20 +154,210 @@ header .visible .nav-list li {
   width: 100%;
 }
 .contenido #tecnologias {
-  background-color: #334756;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-color: #334756;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.contenido #tecnologias .tec_titulo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contenido #tecnologias .tec_titulo .tec_tit_uno {
+  position: absolute;
+  color: #082032;
+  letter-spacing: 5px;
+  font-size: 30px;
+}
+.contenido #tecnologias .tec_titulo .tec_tit_dos {
+  z-index: 1;
+  position: absolute;
+  letter-spacing: 11px;
+  font-size: 12px;
+  margin-top: 1.5vh;
+}
+.contenido #tecnologias .tec_titulo .tec_tit_dos h2 {
+  -webkit-text-decoration: underline #FF4C29;
+          text-decoration: underline #FF4C29;
+}
+.contenido #tecnologias .tec_leng {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  color: #082032;
+  margin-top: 20vh;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 30vh;
+  justify-content: center;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div {
+  text-align: center;
+  width: 25%;
+  height: 35%;
+  margin: 0 1vw;
+  font-size: 15px;
+  color: whitesmoke;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div i {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div img {
+  width: 60px;
+  margin-bottom: 15px;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros {
+  width: 100%;
+  height: 40%;
+  margin-top: 17vh;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros h2 {
+  color: whitesmoke;
+  -webkit-text-decoration: underline #FF4C29;
+          text-decoration: underline #FF4C29;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-size: 10px;
+  color: whitesmoke;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div {
+  text-align: center;
+  width: 15%;
+  height: 15%;
+  margin: 2%;
+  font-size: 15px;
+}
+.contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div i {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.contenido #tecnologias .tec_leng .leng_img {
+  position: absolute;
+  width: 60vw;
+  font-size: 10px;
+  color: whitesmoke;
+  margin-top: -17vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contenido #tecnologias .tec_leng .leng_img img {
+  width: 100px;
+  height: 100px;
+}
+.contenido #tecnologias .tec_leng .leng_img p {
+  font-size: 12px;
 }
 .contenido #portafolio {
-  background-color: #334756;
   width: 100%;
-  height: 90%;
+  height: 100%;
+  background-color: #2C394B;
+  font-size: 18px;
+  padding: 10vh 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* quitar el scroll */
+  /* estilo a los indicadores (glider dot la vemos con consola,
+   es la clase que se activa por defecto con la libreria)  son las flechas de los lados*/
 }
-
-footer {
-  background-color: red;
+.contenido #portafolio .port_titulo {
   width: 100%;
-  height: 10%;
+  display: flex;
+  justify-content: center;
+  color: whitesmoke;
+}
+.contenido #portafolio .port_titulo .port_tit_uno {
+  position: absolute;
+  font-size: 25px;
+  color: #26475e;
+  letter-spacing: 5px;
+  margin-top: -10vh;
+}
+.contenido #portafolio .port_titulo .port_tit_dos {
+  z-index: 1;
+  position: absolute;
+  letter-spacing: 11px;
+  font-size: 12px;
+  margin-top: -8.5vh;
+}
+.contenido #portafolio .port_titulo .port_tit_dos h2 {
+  -webkit-text-decoration: underline #FF4C29;
+          text-decoration: underline #FF4C29;
+}
+.contenido #portafolio .contenedor {
+  width: 100%;
+  margin: auto;
+  color: #fff;
+  margin-top: 15%;
+}
+.contenido #portafolio .carousel_contenedor {
+  position: relative;
+}
+.contenido #portafolio .carousel_anterior,
+.contenido #portafolio .carousel_siguiente {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 50px;
+  border: none;
+  top: calc(50% - 35px);
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  background-color: transparent;
+  color: #fff;
+  font-size: 25px;
+  font-size: 40px;
+}
+.contenido #portafolio .carousel_anterior:hover,
+.contenido #portafolio .carousel_siguiente:hover {
+  color: #FF4C29;
+}
+.contenido #portafolio .carousel_anterior {
+  left: -30px;
+}
+.contenido #portafolio .carousel_siguiente {
+  right: -30px;
+}
+.contenido #portafolio .carousel_lista {
+  overflow: hidden;
+}
+.contenido #portafolio .carousel_indicadores .glider-dot {
+  display: none;
+  width: 30px;
+  height: 4px;
+  background-color: whitesmoke;
+  border-radius: 0; /* se coloca 0 por que por defecto traen border radius y se lo vamos a quitar */
+}
+.contenido #portafolio .carousel_indicadores .glider-dot:hover {
+  background-color: #FF4C29;
+}
+.contenido #portafolio .carousel_indicadores .glider-dot.active {
+  background-color: #FF4C29;
+}
+.contenido #portafolio p {
+  margin-top: 10vh;
+  text-align: center;
+  font-size: 15px;
+}
+.contenido #portafolio p i {
+  color: #FF4C29;
 }
 
 @media (min-width: 501px) and (max-width: 1100px) {
@@ -293,16 +478,209 @@ footer {
 }
 @media (min-width: 501px) and (max-width: 1100px) {
   .contenido #tecnologias {
+    width: 100vw;
+    height: 100vh;
     background-color: #334756;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_titulo {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_uno {
+    position: absolute;
+    color: #082032;
+    letter-spacing: 5px;
+    font-size: 45px;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 18px;
+    margin-top: 2.5vh;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #tecnologias .tec_leng {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes {
+    width: 70vw;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos {
+    background-color: rgb(76, 108, 136);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div {
+    text-align: center;
+    width: 15%;
+    height: 15%;
+    margin: 0 1vw;
+    font-size: 15px;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div i {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div img {
+    width: 60px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros {
+    width: 100%;
+    height: 40%;
+    margin-top: 1vh;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros h2 {
+    color: whitesmoke;
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 25px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div {
+    text-align: center;
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    font-size: 15px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div i {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .leng_img {
+    width: 25vw;
     height: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_leng .leng_img img {
+    width: 200px;
+    height: 100px;
+  }
+  .contenido #tecnologias .tec_leng .leng_img p {
+    font-size: 20px;
   }
 }
 @media (min-width: 501px) and (max-width: 1100px) {
   .contenido #portafolio {
-    background-color: #334756;
     width: 100%;
-    height: 90%;
+    height: 100%;
+    background-color: #2C394B;
+    font-size: 18px;
+    padding: 10vh 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* quitar el scroll */
+    /* estilo a los indicadores (glider dot la vemos con consola,
+    es la clase que se activa por defecto con la libreria)  son las flechas de los lados*/
+  }
+  .contenido #portafolio .port_titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+  }
+  .contenido #portafolio .port_titulo .port_tit_uno {
+    position: absolute;
+    font-size: 45px;
+    color: #26475e;
+    letter-spacing: 5px;
+    margin-top: -10vh;
+  }
+  .contenido #portafolio .port_titulo .port_tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 16px;
+    margin-top: -6.5vh;
+  }
+  .contenido #portafolio .port_titulo .port_tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #portafolio .contenedor {
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    margin-top: 15%;
+  }
+  .contenido #portafolio .carousel_contenedor {
+    position: relative;
+  }
+  .contenido #portafolio .carousel_anterior,
+  .contenido #portafolio .carousel_siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 50px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-size: 25px;
+    font-size: 40px;
+  }
+  .contenido #portafolio .carousel_anterior:hover,
+  .contenido #portafolio .carousel_siguiente:hover {
+    color: #FF4C29;
+  }
+  .contenido #portafolio .carousel_anterior {
+    left: -30px;
+  }
+  .contenido #portafolio .carousel_siguiente {
+    right: -30px;
+  }
+  .contenido #portafolio .carousel_lista {
+    overflow: hidden;
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot {
+    display: none;
+    width: 30px;
+    height: 4px;
+    background-color: whitesmoke;
+    border-radius: 0; /* se coloca 0 por que por defecto traen border radius y se lo vamos a quitar */
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot:hover {
+    background-color: #FF4C29;
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot.active {
+    background-color: #FF4C29;
+  }
+  .contenido #portafolio p {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 20px;
+  }
+  .contenido #portafolio p i {
+    color: #FF4C29;
   }
 }
 @media (min-width: 501px) and (max-width: 1100px) {
@@ -384,7 +762,7 @@ footer {
   .contenido {
     width: 82vw;
     height: 100vh;
-    margin-left: 16.5vw;
+    margin-left: 16.9vw;
     margin-top: -0.1vh;
   }
   .contenido #inicio {
@@ -477,18 +855,206 @@ footer {
     height: 100%;
   }
   .contenido #tecnologias {
-    background-color: #334756;
     width: 100%;
     height: 100%;
+    background-color: #334756;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_titulo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_uno {
+    position: absolute;
+    color: #082032;
+    letter-spacing: 5px;
+    font-size: 55px;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 20px;
+    margin-top: 3vh;
+  }
+  .contenido #tecnologias .tec_titulo .tec_tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #tecnologias .tec_leng {
+    width: 90%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    margin-left: 5vw;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes {
+    width: 70vw;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 40vh;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div {
+    text-align: center;
+    width: 15%;
+    height: 15%;
+    margin: 0 1vw;
+    font-size: 20px;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div i {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos div img {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros {
+    width: 100%;
+    height: 40%;
+    margin-top: 1vh;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros h2 {
+    color: whitesmoke;
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 35px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: whitesmoke;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div {
+    text-align: center;
+    width: 15%;
+    height: 15%;
+    margin: 2%;
+    font-size: 20px;
+  }
+  .contenido #tecnologias .tec_leng .lenguajes .lenguajes_futuros .futuros_iconos div i {
+    font-size: 60px;
+    margin-bottom: 15px;
+  }
+  .contenido #tecnologias .tec_leng .leng_img {
+    width: 30vw;
+    height: 100%;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contenido #tecnologias .tec_leng .leng_img img {
+    width: 300px;
+    height: 300px;
+  }
+  .contenido #tecnologias .tec_leng .leng_img p {
+    width: 80%;
+    font-size: 20px;
   }
   .contenido #portafolio {
-    background-color: #334756;
     width: 100%;
-    height: 90%;
+    height: 100%;
+    background-color: #2C394B;
+    font-size: 18px;
+    padding: 10vh 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* quitar el scroll */
+    /* estilo a los indicadores (glider dot la vemos con consola,
+    es la clase que se activa por defecto con la libreria)  son las flechas de los lados*/
   }
-  .footer {
-    background-color: red;
+  .contenido #portafolio .port_titulo {
     width: 100%;
-    height: 10%;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+  }
+  .contenido #portafolio .port_titulo .port_tit_uno {
+    position: absolute;
+    font-size: 45px;
+    color: #26475e;
+    letter-spacing: 5px;
+    margin-top: -10vh;
+  }
+  .contenido #portafolio .port_titulo .port_tit_dos {
+    z-index: 1;
+    position: absolute;
+    letter-spacing: 11px;
+    font-size: 16px;
+    margin-top: -6.5vh;
+  }
+  .contenido #portafolio .port_titulo .port_tit_dos h2 {
+    -webkit-text-decoration: underline #FF4C29;
+            text-decoration: underline #FF4C29;
+  }
+  .contenido #portafolio .contenedor {
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    margin-top: 15%;
+  }
+  .contenido #portafolio .carousel_contenedor {
+    position: relative;
+  }
+  .contenido #portafolio .carousel_anterior,
+  .contenido #portafolio .carousel_siguiente {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 50px;
+    border: none;
+    top: calc(50% - 35px);
+    cursor: pointer;
+    line-height: 30px;
+    text-align: center;
+    background-color: transparent;
+    color: #fff;
+    font-size: 25px;
+    font-size: 40px;
+  }
+  .contenido #portafolio .carousel_anterior:hover,
+  .contenido #portafolio .carousel_siguiente:hover {
+    color: #FF4C29;
+  }
+  .contenido #portafolio .carousel_anterior {
+    left: -30px;
+  }
+  .contenido #portafolio .carousel_siguiente {
+    right: -30px;
+  }
+  .contenido #portafolio .carousel_lista {
+    overflow: hidden;
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot {
+    display: none;
+    width: 30px;
+    height: 4px;
+    background-color: whitesmoke;
+    border-radius: 0; /* se coloca 0 por que por defecto traen border radius y se lo vamos a quitar */
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot:hover {
+    background-color: #FF4C29;
+  }
+  .contenido #portafolio .carousel_indicadores .glider-dot.active {
+    background-color: #FF4C29;
+  }
+  .contenido #portafolio p {
+    margin-top: 5vh;
+    text-align: center;
+    font-size: 20px;
+  }
+  .contenido #portafolio p i {
+    color: #FF4C29;
   }
 }/*# sourceMappingURL=style.css.map */

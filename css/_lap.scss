@@ -92,7 +92,7 @@ $titulo2:#11466c;
     .contenido{
         width: 82vw;
         height:100vh;
-        margin-left: 16.5vw;
+        margin-left: 16.9vw;
         margin-top: -.1vh;
         #inicio{
             background-color: $medio;
@@ -185,23 +185,233 @@ $titulo2:#11466c;
             }
         }
         #tecnologias{
-            background-color: $claro;
             width: 100%;
             height: 100%;
+            background-color: $claro;
+            color: whitesmoke;
+            .tec_titulo{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                .tec_tit_uno{
+                    position: absolute;
+                    color:$dark;
+                    letter-spacing: 5px;
+                    font-size: 55px;
+                }
+                .tec_tit_dos{
+                    z-index: 1;
+                    position: absolute;
+                    letter-spacing: 11px;
+                    font-size: 20px;
+                    margin-top:3vh;
+                    h2{
+                        text-decoration: underline $red ;
+                    }
+                }
+            }
+    
+            .tec_leng{
+                width: 90%;
+                height: 70%;
+                display: flex;
+                justify-content: center;
+                margin-left: 5vw;
+                .lenguajes{
+                    width: 70vw;
+                    .lenguajes_listos{
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 100%;
+                        height: 40vh;
+                        justify-content: center;
+                        div{              
+                            text-align: center;
+                            width: 15%;
+                            height: 15%;
+                            margin: 0 1vw;
+                            font-size: 20px;
+                            color: whitesmoke;
+                            i{
+                                font-size: 60px;
+                                margin-bottom: 15px;
+                            }
+                            img{
+                                width: 80px;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+    
+                    .lenguajes_futuros{
+                        width: 100%;
+                        height: 40%;
+                        margin-top: 1vh;
+    
+                        h2{
+                            color: whitesmoke;
+                            text-decoration: underline $red ;
+                            text-align: center;
+                            letter-spacing: 2px;
+                            font-size: 35px;
+                        }
+    
+                        .futuros_iconos{
+                            display: flex;
+                            width: 100%;
+                            justify-content: center;
+                            color: whitesmoke;
+                            div{
+                                text-align: center;
+                                width: 15%;
+                                height: 15%;
+                                margin: 2%;
+                                font-size: 20px;
+                                i{
+                                    font-size: 60px;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                
+    
+                .leng_img{
+                    width: 30vw;
+                    height: 100%;
+                    position: static;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    img{
+                        width: 300px;
+                        height: 300px;
+                    }
+                    p{
+                        width: 80%;
+                        font-size: 20px;
+                    }
+                }
+            }
         }
         #portafolio{
-            background-color: $claro;
             width: 100%;
-            height: 90%;
+            height: 100%;
+            background-color:$medio;
+            font-size: 18px;
+            padding:10vh 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .port_titulo{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                color: whitesmoke;
+                .port_tit_uno{
+                    position: absolute;
+                    font-size:45px;
+                    color:$titulo1;
+                    letter-spacing: 5px;
+                    margin-top: -10vh;
+                }
+                .port_tit_dos{
+                    z-index: 1;
+                    position: absolute;
+                    letter-spacing: 11px;
+                    font-size: 16px;
+                    margin-top: -6.5vh;
+
+                    h2{
+                        text-decoration: underline $red ;
+                    }
+                }
+            }
+
+
+            .contenedor {
+                width: 100%;
+                margin: auto;
+                color: #fff;
+                margin-top: 15%;
+            }
+            
+            .carousel_contenedor{
+                position: relative;
+            }
+            
+            .carousel_anterior,
+            .carousel_siguiente{
+                position: absolute;
+                display: block;
+                width: 30px;
+                height: 50px;
+                border: none;
+                top: calc(50% - 35px);
+                cursor: pointer;
+                line-height: 30px;
+                text-align: center;
+                background-color: transparent;
+                color: #fff;
+                font-size: 25px;
+                font-size: 40px;
+            }
+            .carousel_anterior:hover,
+            .carousel_siguiente:hover{
+                color: $red;
+            }
+            
+            .carousel_anterior{
+                left: -30px;
+                
+            }
+            .carousel_siguiente{
+                right: -30px;
+            }
+            /* quitar el scroll */
+            
+            .carousel_lista{
+                overflow: hidden;
+                
+            }
+            
+            /* estilo a los indicadores (glider dot la vemos con consola,
+            es la clase que se activa por defecto con la libreria)  son las flechas de los lados*/
+            
+            .carousel_indicadores .glider-dot{
+                display: none;
+                width: 30px;
+                height: 4px;
+                background-color: whitesmoke;
+                
+                border-radius: 0; /* se coloca 0 por que por defecto traen border radius y se lo vamos a quitar */
+            }
+            .carousel_indicadores .glider-dot:hover{
+                background-color: $red;
+            }
+            .carousel_indicadores .glider-dot.active{
+                background-color: $red;
+            
+            }
+            
+            p{
+                margin-top: 5vh;
+                text-align: center;
+                font-size: 20px;
+                i{
+                    color: $red;
+                    
+                }
+            }
+
     
         }
     }
     
-    .footer{
-        background-color: red;
-        width: 100%;
-        height: 10%;
-    
-    }
+   
     
 }

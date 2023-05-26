@@ -163,12 +163,6 @@ header{
             p{
                 margin: 2vh 0;
                 line-height: 1.5;
-
-                @media (max-width:415px){
-                    .borrar-texto{
-                        display: none;
-                    }
-                }
             }
             .sobreMi_texto_img{
                 width: 30vw;
@@ -179,25 +173,247 @@ header{
             }
         }
     }
+
+
     #tecnologias{
+        width: 100%;
+        height: 100vh;
         background-color: $claro;
+        color: whitesmoke;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .tec_titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .tec_tit_uno{
+                position: absolute;
+                color:$dark;
+                letter-spacing: 5px;
+                font-size: 30px;
+            }
+            .tec_tit_dos{
+                z-index: 1;
+                position: absolute;
+                letter-spacing: 11px;
+                font-size: 12px;
+                margin-top:1.5vh;
+                h2{
+                    text-decoration: underline $red ;
+                }
+            }
+        }
+
+        .tec_leng{
+            width: 100%;
+            height: 70%;
+            display: flex;
+            justify-content: space-around;
+            color: #082032;
+            margin-top: 20vh;
+            .lenguajes{
+
+                .lenguajes_listos{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: 30vh;
+                    justify-content: center;
+                    div{              
+                        text-align: center;
+                        width: 25%;
+                        height: 35%;
+                        margin: 0 1vw;
+                        font-size: 15px;
+                        color: whitesmoke;
+                        i{
+                            font-size: 35px;
+                            margin-bottom: 15px;
+                        }
+                        img{
+                            width: 60px;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+
+                .lenguajes_futuros{
+                    width: 100%;
+                    height: 40%;
+                    margin-top: 17vh;
+
+                    h2{
+                        color: whitesmoke;
+                        text-decoration: underline $red ;
+                        text-align: center;
+                        letter-spacing: 2px;
+                        font-size: 20px;
+                    }
+
+                    .futuros_iconos{
+                        display: flex;
+                        width: 100%;
+                        justify-content: center;
+                        font-size: 10px;
+                        color: whitesmoke;
+                        div{
+                            text-align: center;
+                            width: 15%;
+                            height: 15%;
+                            margin: 2%;
+                            font-size: 15px;
+                            i{
+                                font-size: 35px;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+
+            .leng_img{
+                position: absolute;
+                width: 60vw;
+                font-size: 10px;
+                color: whitesmoke;
+                margin-top: -17vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+                p{
+
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+
+    #portafolio{
         width: 100%;
         height: 100%;
-    }
-    #portafolio{
-        background-color: $claro;
-        width: 100%;
-        height: 90%;
+        background-color:$medio;
+        font-size: 18px;
+        padding:10vh 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
+        .port_titulo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: whitesmoke;
+            .port_tit_uno{
+                position: absolute;
+                font-size: 25px;
+                color:$titulo1;
+                letter-spacing: 5px;
+                margin-top: -10vh;
+            }
+            .port_tit_dos{
+                z-index: 1;
+                position: absolute;
+                letter-spacing: 11px;
+                font-size: 12px;
+                margin-top: -8.5vh;
+
+                h2{
+                    text-decoration: underline $red ;
+                }
+            }
+        }
+
+
+        .contenedor {
+            width: 100%;
+            margin: auto;
+            color: #fff;
+            margin-top: 15%;
+        }
+          
+        .carousel_contenedor{
+            position: relative;
+        }
+        
+        .carousel_anterior,
+        .carousel_siguiente{
+            position: absolute;
+            display: block;
+            width: 30px;
+            height: 50px;
+            border: none;
+            top: calc(50% - 35px);
+            cursor: pointer;
+            line-height: 30px;
+            text-align: center;
+            background-color: transparent;
+            color: #fff;
+            font-size: 25px;
+            font-size: 40px;
+        }
+        .carousel_anterior:hover,
+        .carousel_siguiente:hover{
+            color: $red;
+        }
+        
+        .carousel_anterior{
+            left: -30px;
+            
+        }
+        .carousel_siguiente{
+            right: -30px;
+        }
+        /* quitar el scroll */
+        
+        .carousel_lista{
+            overflow: hidden;
+            
+        }
+        
+        /* estilo a los indicadores (glider dot la vemos con consola,
+         es la clase que se activa por defecto con la libreria)  son las flechas de los lados*/
+        
+        .carousel_indicadores .glider-dot{
+            display: none;
+            width: 30px;
+            height: 4px;
+            background-color: whitesmoke;
+            
+            border-radius: 0; /* se coloca 0 por que por defecto traen border radius y se lo vamos a quitar */
+        }
+        .carousel_indicadores .glider-dot:hover{
+            background-color: $red;
+        }
+        .carousel_indicadores .glider-dot.active{
+            background-color: $red;
+        
+        }
+        
+        p{
+            margin-top: 10vh;
+            text-align: center;
+            font-size: 15px;
+            i{
+                color: $red;
+                
+            }
+        }
+        
     }
+
+   
 }
 
-footer{
-    background-color: red;
-    width: 100%;
-    height: 10%;
 
-}
+
 
 @import "tablet";
 @import "lap";
