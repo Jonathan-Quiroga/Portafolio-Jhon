@@ -1,14 +1,22 @@
+/* menu hamburguesa */
 const nav = document.getElementById("nav");
 const abrir = document.getElementById("abrir");
-const cerrar = document.getElementById("cerrar");
+//const cerrar = document.getElementById("cerrar");
+const cerrarIds = document.querySelectorAll("#cerrar, #cerrar_uno,#cerrar_dos,#cerrar_tres,#cerrar_cuatro ");
 
 abrir.addEventListener("click", () => {
     nav.classList.add("visible");
 })
 
-cerrar.addEventListener("click", () => {
+/* cerrar.addEventListener("click", () => {
     nav.classList.remove("visible");
-})
+}) */
+
+cerrarIds.forEach((elemento) => {
+    elemento.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+});
 
 /* apartado para la creacion de letras  */
 
