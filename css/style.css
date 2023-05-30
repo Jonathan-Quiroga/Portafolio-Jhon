@@ -516,7 +516,6 @@ header .visible .nav-list li {
     width: 70vw;
   }
   .contenido #tecnologias .tec_leng .lenguajes .lenguajes_listos {
-    background-color: rgb(76, 108, 136);
     display: flex;
     flex-wrap: wrap;
     width: 100%;
